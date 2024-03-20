@@ -26,6 +26,7 @@ namespace UdeM_Reportes.Module.BusinessObjects
         {
             base.AfterConstruction();
             FechaRegistro = DateTime.Now;
+            Estado = EstadoUsuario.Activo;
         }
 
 
