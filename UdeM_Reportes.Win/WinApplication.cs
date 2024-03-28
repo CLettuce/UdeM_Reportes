@@ -12,9 +12,27 @@ using DevExpress.ExpressApp.Security.ClientServer;
 namespace UdeM_Reportes.Win {
     // For more typical usage scenarios, be sure to check out https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Win.WinApplication._members
     public partial class UdeM_ReportesWindowsFormsApplication : WinApplication {
-        public UdeM_ReportesWindowsFormsApplication() {
-			InitializeComponent();
-			SplashScreen = new DXSplashScreen(typeof(XafSplashScreen), new DefaultOverlayFormOptions());
+        static UdeM_ReportesWindowsFormsApplication() {
+            DevExpress.Persistent.Base.PasswordCryptographer.EnableRfc2898 = true;
+            DevExpress.Persistent.Base.PasswordCryptographer.SupportLegacySha512 = false;
+            DevExpress.ExpressApp.BaseObjectSpace.ThrowExceptionForNotRegisteredEntityType = true;
+            DevExpress.ExpressApp.Utils.ImageLoader.Instance.UseSvgImages = true;
+            DetailView.UseAsyncLoading = true;
+        }
+        private void InitializeDefaults()
+        {
+            LinkNewObjectToParentImmediately = false;
+            OptimizedControllersCreation = true;
+            UseLightStyle = true;
+            SplashScreen = new DXSplashScreen(typeof(XafSplashScreen), new DefaultOverlayFormOptions());
+            ExecuteStartupLogicBeforeClosingLogonWindow = true;
+        }
+        public UdeM_ReportesWindowsFormsApplication()
+        {
+            InitializeComponent();
+            InitializeDefaults();
+            SplashScreen = new DXSplashScreen(typeof(XafSplashScreen), new DefaultOverlayFormOptions());
+            SecurityStrategy.AdditionalSecuredTypes.Add(typeof(byte));
         }
         protected override void CreateDefaultObjectSpaceProvider(CreateCustomObjectSpaceProviderEventArgs args) {
             args.ObjectSpaceProviders.Add(new SecuredObjectSpaceProvider((SecurityStrategyComplex)Security, XPObjectSpaceProvider.GetDataStoreProvider(args.ConnectionString, args.Connection, true), false));

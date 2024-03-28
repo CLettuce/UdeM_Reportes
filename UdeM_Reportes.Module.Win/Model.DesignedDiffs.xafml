@@ -5,7 +5,11 @@
   </BOModel>
   <NavigationItems>
     <Items>
-      <Item Id="Default" ImageName="Open" />
+      <Item Id="Default" ImageName="Open">
+        <Items>
+          <Item Id="Usuario_ListView" ImageName="NewEmployee" />
+        </Items>
+      </Item>
     </Items>
   </NavigationItems>
   <SchemaModules>

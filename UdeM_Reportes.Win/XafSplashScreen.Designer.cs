@@ -28,36 +28,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XafSplashScreen));
-            this.progressBarControl = new DevExpress.XtraEditors.MarqueeProgressBarControl();
             this.labelCopyright = new DevExpress.XtraEditors.LabelControl();
             this.labelStatus = new DevExpress.XtraEditors.LabelControl();
             this.peImage = new DevExpress.XtraEditors.PictureEdit();
-            this.peLogo = new DevExpress.XtraEditors.PictureEdit();
             this.pcApplicationName = new DevExpress.XtraEditors.PanelControl();
-            this.labelSubtitle = new DevExpress.XtraEditors.LabelControl();
-            this.labelApplicationName = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl.Properties)).BeginInit();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.marqueeProgressBarControl1 = new DevExpress.XtraEditors.MarqueeProgressBarControl();
             ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peLogo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcApplicationName)).BeginInit();
             this.pcApplicationName.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marqueeProgressBarControl1.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // progressBarControl
-            // 
-            this.progressBarControl.EditValue = 0;
-            this.progressBarControl.Location = new System.Drawing.Point(74, 271);
-            this.progressBarControl.Name = "progressBarControl";
-            this.progressBarControl.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.progressBarControl.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.progressBarControl.Properties.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(114)))), ((int)(((byte)(0)))));
-            this.progressBarControl.Properties.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
-            this.progressBarControl.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
-            this.progressBarControl.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.progressBarControl.Properties.ProgressViewStyle = DevExpress.XtraEditors.Controls.ProgressViewStyle.Solid;
-            this.progressBarControl.Properties.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
-            this.progressBarControl.Size = new System.Drawing.Size(350, 16);
-            this.progressBarControl.TabIndex = 5;
             // 
             // labelCopyright
             // 
@@ -90,56 +72,36 @@
             this.peImage.TabIndex = 9;
             this.peImage.Visible = false;
             // 
-            // peLogo
-            // 
-            this.peLogo.EditValue = ((object)(resources.GetObject("peLogo.EditValue")));
-            this.peLogo.Location = new System.Drawing.Point(400, 328);
-            this.peLogo.Name = "peLogo";
-            this.peLogo.Properties.AllowFocused = false;
-            this.peLogo.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.peLogo.Properties.Appearance.Options.UseBackColor = true;
-            this.peLogo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.peLogo.Properties.ShowMenu = false;
-            this.peLogo.Size = new System.Drawing.Size(70, 20);
-            this.peLogo.TabIndex = 8;
-            // 
             // pcApplicationName
             // 
-            this.pcApplicationName.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(114)))), ((int)(((byte)(0)))));
+            this.pcApplicationName.Appearance.BackColor = System.Drawing.Color.White;
             this.pcApplicationName.Appearance.Options.UseBackColor = true;
             this.pcApplicationName.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pcApplicationName.Controls.Add(this.labelSubtitle);
-            this.pcApplicationName.Controls.Add(this.labelApplicationName);
-			this.pcApplicationName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pcApplicationName.Controls.Add(this.pictureEdit1);
+            this.pcApplicationName.Dock = System.Windows.Forms.DockStyle.Top;
             this.pcApplicationName.Location = new System.Drawing.Point(1, 1);
             this.pcApplicationName.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pcApplicationName.Name = "pcApplicationName";
             this.pcApplicationName.Size = new System.Drawing.Size(494, 220);
             this.pcApplicationName.TabIndex = 10;
             // 
-            // labelSubtitle
+            // pictureEdit1
             // 
-            this.labelSubtitle.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSubtitle.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(188)))));
-            this.labelSubtitle.Appearance.Options.UseFont = true;
-            this.labelSubtitle.Appearance.Options.UseForeColor = true;
-            this.labelSubtitle.Location = new System.Drawing.Point(222, 131);
-            this.labelSubtitle.Name = "labelSubtitle";
-            this.labelSubtitle.Size = new System.Drawing.Size(64, 25);
-            this.labelSubtitle.TabIndex = 1;
-            this.labelSubtitle.Text = "Subtitle";
+            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
+            this.pictureEdit1.Location = new System.Drawing.Point(74, 26);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEdit1.Size = new System.Drawing.Size(337, 186);
+            this.pictureEdit1.TabIndex = 0;
             // 
-            // labelApplicationName
+            // marqueeProgressBarControl1
             // 
-            this.labelApplicationName.Appearance.Font = new System.Drawing.Font("Segoe UI", 26.25F);
-            this.labelApplicationName.Appearance.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelApplicationName.Appearance.Options.UseFont = true;
-            this.labelApplicationName.Appearance.Options.UseForeColor = true;
-            this.labelApplicationName.Location = new System.Drawing.Point(123, 84);
-            this.labelApplicationName.Name = "labelApplicationName";
-            this.labelApplicationName.Size = new System.Drawing.Size(278, 47);
-            this.labelApplicationName.TabIndex = 0;
-            this.labelApplicationName.Text = "Application Name";
+            this.marqueeProgressBarControl1.Location = new System.Drawing.Point(75, 272);
+            this.marqueeProgressBarControl1.Name = "marqueeProgressBarControl1";
+            this.marqueeProgressBarControl1.Size = new System.Drawing.Size(363, 18);
+            this.marqueeProgressBarControl1.TabIndex = 11;
             // 
             // XafSplashScreen
             // 
@@ -147,35 +109,30 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(496, 370);
+            this.Controls.Add(this.marqueeProgressBarControl1);
             this.Controls.Add(this.pcApplicationName);
             this.Controls.Add(this.peImage);
-            this.Controls.Add(this.peLogo);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.labelCopyright);
-            this.Controls.Add(this.progressBarControl);
             this.Name = "XafSplashScreen";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peLogo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcApplicationName)).EndInit();
             this.pcApplicationName.ResumeLayout(false);
-            this.pcApplicationName.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marqueeProgressBarControl1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.MarqueeProgressBarControl progressBarControl;
         private DevExpress.XtraEditors.LabelControl labelCopyright;
         private DevExpress.XtraEditors.LabelControl labelStatus;
-        private DevExpress.XtraEditors.PictureEdit peLogo;
         private DevExpress.XtraEditors.PictureEdit peImage;
         private DevExpress.XtraEditors.PanelControl pcApplicationName;
-        private DevExpress.XtraEditors.LabelControl labelSubtitle;
-        private DevExpress.XtraEditors.LabelControl labelApplicationName;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.XtraEditors.MarqueeProgressBarControl marqueeProgressBarControl1;
     }
 }
